@@ -1,0 +1,12 @@
+
+.cards__like-icon {
+    width: 1.3rem;
+    height: 1.2rem;
+    background-image: url(/images/icon/like-button.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.4s ease-in-out;
+  }
+  .cards__like:checked ~ .cards__like-icon {
+    background-image: url(/images/icon/like-button-active.svg);
+  }
