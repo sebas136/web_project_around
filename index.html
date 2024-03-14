@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Around The U.S.</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body class="page">
+    <header class="header">
+      <img
+        src="./images/logo.svg"
+        alt="logo around the u.s."
+        class="header__logo"
+      />
+    </header>
+
+    <main id="main">
+      <section class="profile">
+        <img
+          src="./images/img-profile.jpg"
+          alt="profile picture"
+          class="profile__image"
+        />
+        <div class="profile__info">
+          <h1 class="profile__name">Jacques Cousteau</h1>
+          <button class="profile__edit-button"></button>
+          <p class="profile__about">Explorador</p>
+        </div>
+        <button class="profile__add-button"></button>
+      </section>
+
+      <section class="popup">
+        <form action="#" class="popup__container">
+          <h2 class="popup__title">Editar perfil</h2>
+          <input
+            type="text"
+            class="popup__input popup__input_name"
+            placeholder="Nombre"
+          />
+          <input
+            type="text"
+            class="popup__input popup__input_about"
+            placeholder="Acerca de mí"
+          />
+          <button class="popup__submit">Guardar</button>
+          <button class="popup__close"></button>
+        </form>
+      </section>
+
+      <section class="cards">
+        <div class="cards__card">
+          <img
+            src="./images/cards/card-1.jpg"
+            alt="valle de yosemite"
+            class="cards__image"
+          />
+          <label for="cards-1" class="cards__menu">
+            <input type="checkbox" class="cards__like" id="cards-1" />
+            <span class="cards__title">Valle de Yosemite</span>
+            <span class="cards__like-icon"></span>
+          </label>
+        </div>
+
+        <div class="cards__card">
+          <img
+            src="/images/cards/card-2.jpg"
+            alt="lago louise"
+            class="cards__image"
+          />
+          <label for="cards-2" class="cards__menu">
+            <input type="checkbox" class="cards__like" id="cards-2" />
+            <span class="cards__title">Lago Louise</span>
+            <span class="cards__like-icon"></span>
+          </label>
+        </div>
+
+        <div class="cards__card">
+          <img
+            src="./images/cards/card-3.jpg"
+            alt="montañas calvas"
+            class="cards__image"
+          />
+          <label for="cards-3" class="cards__menu">
+            <input type="checkbox" class="cards__like" id="cards-3" />
+            <span class="cards__title">Montañas Calvas</span>
+            <span class="cards__like-icon"></span>
+          </label>
+        </div>
+
+        <div class="cards__card">
+          <img
+            src="./images/cards/card-4.jpg"
+            alt="latemar"
+            class="cards__image"
+          />
+          <label for="cards-4" class="cards__menu">
+            <input type="checkbox" class="cards__like" id="cards-4" />
+            <span class="cards__title">Latemar</span>
+            <span class="cards__like-icon"></span>
+          </label>
+        </div>
+
+        <div class="cards__card">
+          <img
+            src="./images/cards/card-5.jpg"
+            alt="parque nacional de vanoisek"
+            class="cards__image"
+          />
+          <label for="cards-5" class="cards__menu">
+            <input type="checkbox" class="cards__like" id="cards-5" />
+            <span class="cards__title">Parque Nacional de Vanoisek</span>
+            <span class="cards__like-icon"></span>
+          </label>
+        </div>
+
+        <div class="cards__card">
+          <img
+            src="./images/cards/card-6.jpg"
+            alt="lago di braies"
+            class="cards__image"
+          />
+          <label for="cards-6" class="cards__menu">
+            <input type="checkbox" class="cards__like" id="cards-6" />
+            <span class="cards__title">Lago di Braies</span>
+            <span class="cards__like-icon"></span>
+          </label>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p class="footer__copyright">&copy; Sebastian Vaca </p>
+    </footer>
+    <script src="./scripts/script.js"></script>
+  </body>
+</html>
