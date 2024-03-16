@@ -1,44 +1,35 @@
 
-const main = document.querySelector("#main");
-const editButton = main.querySelector(".profile__edit-button");
-const editProfile = main.querySelector(".popup");
-const closeButton = editProfile.querySelector(".popup__close");
+const editButton = document.querySelector(".profile__edit-button");
+const editProfilePopup = document.querySelector(".popup");
+const closePopupButton = editProfilePopup.querySelector(".popup__close");
+const nameInput = editProfilePopup.querySelector(".popup__input_name");
+const aboutInput = editProfilePopup.querySelector(".popup__input_about");
 
-function popupProfileToggle() {
-  editProfile.classList.toggle("popup__opened");
-  inputName.value = profileName.textContent;
-  inputDescription.value = profileAbout.textContent;
-  
+const profilName = document.querySelector(".profile__name");
+const profileAbout = document.querySelector(".profile__about");
+const editProfileForm = document.querySelector(".popup__container");
+
+
+function openEditPopup() {
+  nameInput.value = profilName.textContent;
+  aboutInput.value = profileAbout.textContent;
+  editProfilePopup.classList.add("popup_opened");
 }
 
-function popupToggleNewCard() {
 
+function closeEditPopup() {
+  editProfilePopup.classList.remove("popup_opened");
 }
 
-closeButton.addEventListener("click", popupProfileToggle);
-editButton.addEventListener("click", popupProfileToggle);
 
-const profileName = main.querySelector(".profile__name");
-const profileAbout = main.querySelector(".profile__about");
-const inputName = editProfile.querySelector(".popup__input_name");
-const inputDescription = editProfile.querySelector(".popup__input_about");
-const submitButton = editProfile.querySelector(".popup__submit");
-const formProfile = editProfile.querySelector('form');
+editButton.addEventListener("click", openEditPopup);
 
-function changeForm(event) {
-  event.preventDefault();
-  const nameValue = inputName.value;
-  const descriptionValue = inputDescription.value;
-  const profileNameText = profileName.textContent;
-  const profileAboutText = profileAbout.textContent;
-  
-}
 
-formProfile.addEventListener("submit", changeForm);
+closePopupButton.addEventListener("click", closeEditPopup);
 
-submitButton.addEventListener("click", function (evt) {
+editProfileForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
-  profileName.textContent = inputName.value;
-  profileAbout.textContent = inputDescription.value;
-  popupProfileToggle();
+  profilName.textContent = nameInput.value;
+  profileAbout.textContent = aboutInput.value;
+  closeEditPopup();
 });
