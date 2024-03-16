@@ -1,138 +1,118 @@
-
 <!DOCTYPE html>
-<html lang="es">
+<html lang="id">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Around The U.S.</title>
+    <title>Around The U.S</title>
     <link rel="stylesheet" href="./pages/index.css" />
   </head>
-  <body class="page">
+  <body>
     <header class="header">
-      <img
-        src="./images/logo.svg"
-        alt="logo around the U.S.A"
-        class="header__logo"
-      />
+      <img class="header__logo" src="./images/Vector.svg" alt="AROUND the us" />
     </header>
-
-    <main id="main">
+    <main class="main">
       <section class="profile">
-        <img
-          src="./images/img-profile.jpg"
-          alt="profile picture"
-          class="profile__image"
-        />
+        <img class="profile__avatar" src="./images/image.jpg" alt="profile" />
         <div class="profile__info">
           <h1 class="profile__name">Jacques Cousteau</h1>
           <button class="profile__edit-button"></button>
-          <p class="profile__about">Explorador</p>
+          <p class="profile__about">Explorer</p>
         </div>
-        <button class="profile__add-button"></button>
+        <button class="profile__add-button" type="button"></button>
       </section>
 
       <section class="popup">
         <form action="#" class="popup__container">
-          <h2 class="popup__title">Editar perfil</h2>
+          <h2 class="popup__title">Edit profile</h2>
           <input
             type="text"
             class="popup__input popup__input_name"
-            placeholder="Nombre"
+            placeholder="Name"
           />
           <input
             type="text"
             class="popup__input popup__input_about"
-            placeholder="Acerca de mí"
+            placeholder="About me"
           />
-          <button type="submit" class="popup__submit">Guardar</button>
-          <button class="popup__close"></button>
+          <button class="popup__submit" type="submit">Save</button>
+          <button class="popup__close" type="button"></button>
         </form>
       </section>
 
       <section class="cards">
         <div class="cards__card">
           <img
-            src="./images/cards/card-1.jpg"
-            alt="valle de yosemite"
             class="cards__image"
+            src="./images/card__image/card__image-1.jpg"
+            alt="image-1"
           />
-          <label for="cards-1" class="cards__menu">
-            <input type="checkbox" class="cards__like" id="cards-1" />
-            <span class="cards__title">Valle de Yosemite</span>
-            <span class="cards__like-icon"></span>
-          </label>
+          <div class="cards__group">
+            <h2 class="cards__title">Lembah Yosemite</h2>
+            <div class="cards__like-icon"></div>
+          </div>
         </div>
-
         <div class="cards__card">
           <img
-            src="/images/cards/card-2.jpg"
-            alt="lago louise"
             class="cards__image"
+            src="./images/card__image/card__image-2.png"
+            alt="image-2"
           />
-          <label for="cards-2" class="cards__menu">
-            <input type="checkbox" class="cards__like" id="cards-2" />
-            <span class="cards__title">Lago Louise</span>
-            <span class="cards__like-icon"></span>
-          </label>
+          <div class="cards__group">
+            <h2 class="cards__title">Danau Louise</h2>
+            <div class="cards__like-icon"></div>
+          </div>
         </div>
-
         <div class="cards__card">
           <img
-            src="./images/cards/card-3.jpg"
-            alt="montañas calvas"
             class="cards__image"
+            src="./images/card__image/card__image-3.png"
+            alt="image-3"
           />
-          <label for="cards-3" class="cards__menu">
-            <input type="checkbox" class="cards__like" id="cards-3" />
-            <span class="cards__title">Montañas Calvas</span>
-            <span class="cards__like-icon"></span>
-          </label>
+          <div class="cards__group">
+            <h2 class="cards__title">Pegunungan Gundul</h2>
+            <div class="cards__like-icon"></div>
+          </div>
         </div>
-
         <div class="cards__card">
           <img
-            src="./images/cards/card-4.jpg"
-            alt="latemar"
             class="cards__image"
+            src="./images/card__image/card__image-4.png"
+            alt="image-4"
           />
-          <label for="cards-4" class="cards__menu">
-            <input type="checkbox" class="cards__like" id="cards-4" />
-            <span class="cards__title">Latemar</span>
-            <span class="cards__like-icon"></span>
-          </label>
+          <div class="cards__group">
+            <h2 class="cards__title">Latemar</h2>
+            <div class="cards__like-icon"></div>
+          </div>
         </div>
-
         <div class="cards__card">
           <img
-            src="./images/cards/card-5.jpg"
-            alt="parque nacional de vanoisek"
             class="cards__image"
+            src="./images/card__image/card__image-5.png"
+            alt="image-5"
           />
-          <label for="cards-5" class="cards__menu">
-            <input type="checkbox" class="cards__like" id="cards-5" />
-            <span class="cards__title">Parque Nacional de Vanoisek</span>
-            <span class="cards__like-icon"></span>
-          </label>
+          <div class="cards__group">
+            <h2 class="cards__title">Vanoise Nationa..</h2>
+            <div class="cards__like-icon"></div>
+          </div>
         </div>
-
         <div class="cards__card">
           <img
-            src="./images/cards/card-6.jpg"
-            alt="lago di braies"
             class="cards__image"
+            src="./images/card__image/card__image-6.png"
+            alt="image-6"
           />
-          <label for="cards-6" class="cards__menu">
-            <input type="checkbox" class="cards__like" id="cards-6" />
-            <span class="cards__title">Lago di Braies</span>
-            <span class="cards__like-icon"></span>
-          </label>
+          <div class="cards__group">
+            <h2 class="cards__title">Lago di Braies</h2>
+            <div class="cards__like-icon"></div>
+          </div>
         </div>
       </section>
     </main>
-
     <footer class="footer">
-      <p class="footer__copyright">&copy; Sebastian Vaca </p>
+      <span class="footer__copyright"
+        >© 2024 Around The U.S. by SSebastian Vaca</span
+      >
     </footer>
-    <script src="./scripts/script.js"></script>
+    <script src="./scripts/main.js"></script>
   </body>
 </html>

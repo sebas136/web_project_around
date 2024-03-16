@@ -1,0 +1,64 @@
+
+
+.cards {
+    width: 880px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+  
+  .cards__card {
+    width: 282px;
+    height: 361px;
+    background-color: #fff;
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+  
+  .cards__image {
+    width: 100%;
+  }
+  
+  .cards__group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: auto 15px auto 21px;
+  }
+  
+  .cards__title {
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: normal;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .cards__like {
+    display: none;
+  }
+  
+  .cards__like-icon {
+    width: 21px;
+    height: 19px;
+    background-image: url(../images/icon/like-button.svg);
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: 0.4s ease-in-out;
+  }
+  .cards__like-icon:hover {
+    background-image: url(../images/icon/like-button-actived.svg);
+  }
+  
+  @media screen and (max-width: 881px){
+    .cards {
+        width: 320px;
+        justify-content: center;        
+    }
+}
