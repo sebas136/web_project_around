@@ -32,11 +32,12 @@
     background: none;
     padding: 0;
     margin: 0;
-    background-image: url();
+    background-image: url(/images/icon/Trash.png);
     position: absolute;
     top: 24px;
     right: 17px;
-    width: 16px;   
+    width: 16px; 
+    height: 14px;  
     border: none;
 }
   .cards__title {
