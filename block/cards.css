@@ -27,7 +27,19 @@
     align-items: center;
     margin: auto 15px auto 21px;
   }
-  
+
+  .cards__delete {
+    background: none;
+    padding: 0;
+    margin: 0;
+    background-image: url('images/icon/Trash.png');
+    position: absolute;
+    top: 24px;
+    right: 17px;
+    width: 16px;
+    height: 14px;    
+    border: none;
+}
   .cards__title {
     font-family: Inter;
     font-size: 24px;

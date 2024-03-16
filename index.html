@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,42 +38,74 @@
           <button class="popup__close" type="button"></button>
         </form>
       </section>
+      <div class="popup" id="popup-add">
+        <form class="popup__form">
+          <button class="popup__close-button" id="close-add"></button>
+          <fieldset class="popup__fieldset">
+            <label class="popup__title" for="input-img">Nuevo lugar</label>
+            <input
+              type="text"
+              class="popup__input"
+              id="input-img"
+              name="img"
+              placeholder="Titulo"
+              required
+            /><input
+              type="text"
+              class="popup__input"
+              id="input-link"
+              name="link"
+              placeholder="Enlace a la imagen"
+              required
+            />
+            <button class="popup__button popup__button-create" type="submit">
+              Crear
+            </button>
+          </fieldset>
+        </form>
+      </div>
 
       <section class="cards">
         <div class="cards__card">
+          <button class="cards__delete"></button>
           <img
             class="cards__image"
             src="./images/card__image/card-1.jpg"
             alt="image-1"
           />
           <div class="cards__group">
-            <h2 class="cards__title">Lembah Yosemite</h2>
+            <h2 class="cards__title">Yosemite Valley</h2>
             <div class="cards__like-icon"></div>
+            
           </div>
         </div>
         <div class="cards__card">
+          <button class="cards__delete"></button>
           <img
             class="cards__image"
             src="./images/card__image/card-2.jpg"
             alt="image-2"
           />
           <div class="cards__group">
-            <h2 class="cards__title">Danau Louise</h2>
+            <h2 class="cards__title">Lago Louise</h2>
             <div class="cards__like-icon"></div>
           </div>
         </div>
         <div class="cards__card">
+          <button class="cards__delete"></button>
           <img
             class="cards__image"
             src="./images/card__image/card-3.jpg"
+      
             alt="image-3"
           />
           <div class="cards__group">
-            <h2 class="cards__title">Pegunungan Gundul</h2>
+            <h2 class="cards__title">Bald Mountains</h2>
             <div class="cards__like-icon"></div>
           </div>
         </div>
         <div class="cards__card">
+          <button class="cards__delete"></button>
           <img
             class="cards__image"
             src="./images/card__image/card-4.jpg"
@@ -85,17 +117,19 @@
           </div>
         </div>
         <div class="cards__card">
+          <button class="cards__delete"></button>
           <img
             class="cards__image"
             src="./images/card__image/card-5.jpg"
             alt="image-5"
           />
           <div class="cards__group">
-            <h2 class="cards__title">Vanoise Nationa..</h2>
+            <h2 class="cards__title">Vanoise National Park</h2>
             <div class="cards__like-icon"></div>
           </div>
         </div>
         <div class="cards__card">
+          <button class="cards__delete"></button>
           <img
             class="cards__image"
             src="./images/card__image/card-6.jpg"
@@ -110,7 +144,7 @@
     </main>
     <footer class="footer">
       <span class="footer__copyright"
-        >© 2024 Around The U.S. by SSebastian Vaca</span
+        >© 2024 Around The U.S. by Sebastian Vaca</span
       >
     </footer>
     <script src="./scripts/script.js"></script>
