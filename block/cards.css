@@ -28,16 +28,6 @@
     margin: auto 15px auto 21px;
   }
 
-  .cards__delete {
-    background: none;
-    background-image: url(/images/icon/Trash.png);
-    position: absolute;
-    top: 24px;
-    right: 17px;
-    width: 16px; 
-    max-height: 14px;  
-    border: none;
-  }
 
 
   .cards__title {
