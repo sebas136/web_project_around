@@ -1,74 +1,78 @@
-
-
 .cards {
-    width: 880px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1rem;
+    max-width: 880px;
+    margin: 50px auto 0;
+    display: grid;
+    grid-template-columns: 282px 282px 282px;
+    grid-template-rows: 362px 362px;
+    gap: 20px 17px;
   }
-  
-  .cards__card {
+  .cards__container {
+    border-radius: 10px;
+    background: #fff;
     width: 282px;
     height: 361px;
-    background-color: #fff;
-    border-radius: 1rem;
+    padding: 0;
+    position: relative;
+  }
+  .cards__place-image {
+    width: 282px;
+    height: 282px;
+    border-radius: 10px 10px 0px 0px;
+    margin: 0;
+  }
+  .cards__info {
+    display: flex;
+    justify-content: space-between;
+    width: 246px;
+    height: 79px;
+    margin: 0 22px 0 21px;
+  }
+  .cards__text {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 23px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     overflow: hidden;
+    color: #000000;
+    margin: auto auto;
   }
   
-  .card__delete {
+  .cards__delete {
     position: absolute;
     max-width: 18px;
     max-height: 19.3px;
     top: 18px;
     right: 15px;
-    
-  }
-  .cards__image {
-    width: 100%;
   }
   
-  .cards__group {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto 15px auto 21px;
-  }
-
-
-
-  .cards__title {
-    font-family: Inter;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-  }
-  
-  .cards__like {
-    display: none;
-  }
-  
-  .cards__like-icon {
-    width: 21px;
-    height: 19px;
-    background-image: url(../images/icon/like-button.svg);
+  .cards__delete:hover {
+    opacity: 0.6;
     cursor: pointer;
-    background-repeat: no-repeat;
-    background-size: contain;
-    transition: 0.4s ease-in-out;
   }
-  .cards__like-icon:hover {
-    background-image: url(../images/icon/like-button-actived.svg);
+
+  .cards__like {
+    margin: auto auto;
+  }
+  .cards__like:hover {
+    opacity: 0.5;
+    cursor: pointer;
   }
   
-  @media screen and (max-width: 881px){
+  @media screen and (max-width: 880px) {
     .cards {
-        width: 320px;
-        justify-content: center;        
+      max-width: 581px;
+      margin: 36px auto 0;
+      grid-template-columns: 282px 282px;
     }
-}
+  }
+  
+  @media screen and (max-width: 580px) {
+    .cards {
+      max-width: 282px;
+      margin: 36px auto 0;
+      grid-template-columns: 282px;
+    }
+  }
