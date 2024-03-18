@@ -1,38 +1,15 @@
-html {
-    line-height: 1.15;
-    -webkit-text-size-adjust: 100%;
-    display: block;
-  }
-  
-  body {
-    background-color: #000;
+
+.page {
     margin: auto;
+    padding-top: 45px;
+    background-color: #000000;
+    height: 100%;
     max-width: 1280px;
-    font-family: "Inter";
-    padding: 0;
+    text-rendering: optimizeLegibility;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
   }
   
-  p,
-  h1 {
-    color: #fff;
-  }
-  
-  h2 {
-    color: #000;
-  }
-  
-  image {
-    width: 100%;
-  }
-  
-  @media screen and (max-width: 881px) {
-    body {
-      padding: 1.75rem 4rem 2.25rem;
-    }
-  }
-  
-  @media screen and (max-width: 319px) {
-    body {
-      padding: 0 1.2rem;
-    }
-  }
