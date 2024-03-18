@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <title>Around The U.S.</title>
+    <link rel="stylesheet" href="./pages/index.css" />
+   
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <img
+          src="./images/logo.svg" alt="Around the U.S." class="header__logo"
+        />
+      </header>
+      <main>
+        <section class="profile">
+          <div class="profile__container">
+            <img src="./images/img-profile.jpg" alt="perfil" class="profile__avatar"
+            />
+            <h1 class="profile__info">Jacques Cousteau</h1>
+            <h2 class="profile__title">Explorer</h2>
+            <img src="./images/icon/edit-button.svg" alt="editar boton" class="profile__edit"
+            />
+            <img
+              src="./images/icon/add-button.svg" alt=" agregar" class="profile__add"
+            />
+          </div>
+        </section>
+        <section class="cards">
+          <div class="cards__container">
+            <img
+              src="./images/card__image/card-1.jpg"
+              alt="Yosemite Valley"
+              class="cards__place-image"
+            />
+            <img
+              src="./images/icon/Trash.png"
+              alt="delete button"
+              class="cards__delete"
+            />
+            <div class="cards__info">
+              <h3 class="cards__text">Yosemite Valley</h3>
+              <img
+                src="./images/icon/like-button.svg"
+                alt="like button"
+                class="cards__like"
+              />
+            </div>
+          </div>
+          <div class="cards">
+            <img
+              src="./images/card__image/card-2.jpg"
+              alt="Lake Louise"
+              class="cards"
+            />
+            <img
+            src="./images/icon/Trash.png"
+            alt="delete button"
+            class="cards__delete"
+            />
+            <div class="cards__info">
+              <h3 class="cards__text">Lake Louise</h3>
+              <img
+              src="./images/icon/like-button.svg"
+              alt="like button"
+              class="cards__like"
+              />
+            </div>
+          </div>
+          <div class="cards__container">
+            <img
+              src="./images/card__image/card-3.jpg"
+              alt="Bald Mountains"
+              class="cards__place-image"
+            />
+            <img
+            src="./images/icon/Trash.png"
+            alt="delete button"
+            class="cards__delete"
+            />
+            <div class="cards__info">
+              <h3 class="cards__text">Bald Mountains</h3>
+              <img
+              src="./images/icon/like-button.svg"
+              alt="like button"
+              class="cards__like"
+              />
+            </div>
+          </div>
+          <div class="elements__container">
+            <img
+              src="./images/card__image/card-4.jpg"
+              alt="Latermar"
+              class="cards__place-image"
+            />
+            <img
+            src="./images/icon/Trash.png"
+            alt="delete button"
+            class="cards__delete"
+            />
+            <div class="cards__info">
+              <h3 class="cards__text">Latermar</h3>
+              <img
+              src="./images/icon/like-button.svg"
+              alt="like button"
+              class="cards__like"
+              />
+            </div>
+          </div>
+          <div class="cards__container">
+            <img
+              src="./images/card__image/card-5.jpg"
+              alt="Vanoise National Park"
+              class="cards__place-image"
+            />
+            <img
+            src="./images/icon/Trash.png"
+            alt="delete button"
+            class="cards__delete"
+            />
+            <div class="cards__info">
+              <h3 class="cards__text">Vanoise National Park</h3>
+              <img
+              src="./images/icon/like-button.svg"
+              alt="like button"
+              class="cards__like"
+              />
+            </div>
+          </div>
+          <div class="cards__container">
+            <img
+              src="./images/card__image/card-6.jpg"
+              alt="lago di Braies"
+              class="cards__place-image"
+            />
+            <img
+            src="./images/icon/Trash.png"
+            alt="delete button"
+            class="cards__delete"
+            />
+            <div class="cards__info">
+              <h3 class="cards__text">Lago di Braies</h3>
+              <img
+                src="./images/Like.png"
+                src="./images/icon/like-button.svg"
+                alt="like button"
+                class="cards__like"
+              />
+            </div>
+          </div>
+          <!-- -----------POPUP Perfil--------------- -->
+        </section>
+        <div class="popup" id="popup-profile">
+          <form class="popup__form">
+            <button class="popup__close-button" id="close-profile"></button>
+            <fieldset class="popup__fieldset">
+              <label class="popup__title" for="input-name">Edit profile</label>
+              <input
+                type="text"
+                class="popup__input"
+                id="input-name"
+                name="nombre"
+                placeholder="Nombre"
+                required
+              /><input
+                type="text"
+                class="popup__input"
+                id="input-title"
+                name="title"
+                placeholder="Acerca de mi"
+                required
+              />
+              <button class="popup__button popup__button-save" type="submit">
+                Save
+              </button>
+            </fieldset>
+          </form>
+        </div>
+        <!-- ----------- Pop Up + ----------- -->
+        <div class="popup" id="popup-add">
+          <form class="popup__form">
+            <button class="popup__close-button" id="close-add"></button>
+            <fieldset class="popup__fieldset">
+              <label class="popup__title" for="input-img">Nuevo lugar</label>
+              <input
+                type="text"
+                class="popup__input"
+                id="input-img"
+                name="img"
+                placeholder="Titulo"
+                required
+              /><input
+                type="text"
+                class="popup__input"
+                id="input-link"
+                name="link"
+                placeholder="Enlace a la imagen"
+                required
+              />
+              <button class="popup__button popup__button-create" type="submit">
+                Crear
+              </button>
+            </fieldset>
+          </form>
+        </div>
+      </main>
+      <footer class="footer">
+        <p class="footer__copyright">&copy;2024 Sebastian Vaca</p>
+      </footer>
+    </div>
+    <!-- -------------Template------------- -->
+    <template class="template__elements">
+      <div class="cards__container">
+        <img class="cards__place-image" />
+        <button class="cards__delete"></button>
+      </div>
+      <div class="cards__info">
+        <h3 class="cards__text"></h3>
+        <button class="cards__like"></button>
+      </div>
+    </template>
+
+    <script src="./Scripts/Script.js"></script>
+  </body>
+</html>
