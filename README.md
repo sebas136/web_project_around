@@ -12,4 +12,4 @@ HTML5 - CSS3 - Medias Queries - JavaScript - (DOM) con  Metodología BEM creada
 
 Todabia no esta finalizado pero lo ire contruyendo poco a poco con lo que se vaya continuando los estudios de desarrollo web y programacion.
 
-https://github.com/sebas136/web_project_around/
+ https://sebas136.github.io/web_project_around/
