@@ -17,6 +17,14 @@
     overflow: hidden;
   }
   
+  .card__delete {
+    position: absolute;
+    max-width: 18px;
+    max-height: 19.3px;
+    top: 18px;
+    right: 15px;
+    
+  }
   .cards__image {
     width: 100%;
   }
