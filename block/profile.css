@@ -40,11 +40,12 @@
   color: #ffffff;
   margin: 15px 0 0 30px;
   grid-area: title;
+  overflow: hidden;
 }
 .profile__edit {
   grid-area: edit;
   border: #ffffff 1px solid;
-  padding: 6.5px;
+  padding:0%;
   margin: 37px 0 0 18px;
 }
 .profile__edit:hover {
