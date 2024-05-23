@@ -10,6 +10,11 @@ const formProfile = document.querySelector(".popup__form");
 const popUpAdd = document.querySelector("#popup-add");
 const btnAdd = document.querySelector(".profile__add");
 const btnCloseAdd = document.querySelector("#close-add");
+const template = document.querySelector(".template__elements")
+const cardArea = document.querySelector(".cards__container");
+
+
+
 
 const initialCards = [
   {
@@ -37,6 +42,22 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
   },
 ];
+
+function cardGenerator(name, link) {
+  const card = template
+  .cloneNode(true)
+  .content.querySelector(".cards__container");
+  const cardImage = card.querySelector(".cards__place-image");
+  const cardTitle = card.querySelector(".cards__text");
+  cardImage.src = link;
+  cardTitle.textContent = name;
+  cardImage.alt = name;
+
+  cardArea.append(card);
+  }
+  initialCards.forEach(function(element){
+    cardGenerator(element.name, element.link);
+  });
 
 //open close profile profile
 function openProfile() {
