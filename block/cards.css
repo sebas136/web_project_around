@@ -14,6 +14,10 @@
     padding: 0;
     position: relative;
   }
+.cards__elements{
+  height: 282px;
+}
+
   .cards__place-image {
     width: 282px;
     height: 282px;
@@ -46,6 +50,7 @@
     max-height: 19px;
     top: 18px;
     right: 15px;
+    background-image: url(/images/icon/Trash.png);
   }
   
   .cards__delete:hover {
@@ -55,6 +60,7 @@
 
   .cards__like {
     margin: auto auto;
+    background-image: url(/images/icon/like-button.svg);
   }
   .cards__like:hover {
     opacity: 0.5;

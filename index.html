@@ -30,127 +30,19 @@
         </section>
         <section class="cards">
           <div class="cards__container">
-            <img
-              src="./images/card__image/card-1.jpg"
-              alt="Yosemite Valley"
-              class="cards__place-image"
-            />
-            <img
-              src="./images/icon/Trash.png"
-              alt="delete button"
-              class="cards__delete"
-            />
-            <div class="cards__info">
-              <h3 class="cards__text">Yosemite Valley</h3>
-              <img
-                src="./images/icon/like-button.svg"
-                alt="like button"
-                class="cards__like"
-              />
-            </div>
+            <template class="template__elements">
+              <div class="cards__container">
+                <img class="cards__place-image" src="" alt="" />
+                <button class="cards__delete"></button>
+              <div class="cards__info">
+                <h3 class="cards__text"></h3>
+                <button class="cards__like"></button>
+              </div>
+              </div>
+            </template>
           </div>
-          <div class="cards__container">
-            <img
-              src="./images/card__image/card-2.jpg"
-              alt="Lake Louise"
-              class="cards__place-image"
-            />
-            <img
-            src="./images/icon/Trash.png"
-            alt="delete button"
-            class="cards__delete"
-            />
-            <div class="cards__info">
-              <h3 class="cards__text">Lake Louise</h3>
-              <img
-              src="./images/icon/like-button.svg"
-              alt="like button"
-              class="cards__like"
-              />
-            </div>
-          </div>
-          <div class="cards__container">
-            <img
-              src="./images/card__image/card-3.jpg"
-              alt="Bald Mountains"
-              class="cards__place-image"
-            />
-            <img
-            src="./images/icon/Trash.png"
-            alt="delete button"
-            class="cards__delete"
-            />
-            <div class="cards__info">
-              <h3 class="cards__text">Bald Mountains</h3>
-              <img
-              src="./images/icon/like-button.svg"
-              alt="like button"
-              class="cards__like"
-              />
-            </div>
-          </div>
-          <div class="cards__container">
-            <img
-              src="./images/card__image/card-4.jpg"
-              alt="Latermar"
-              class="cards__place-image"
-            />
-            <img
-            src="./images/icon/Trash.png"
-            alt="delete button"
-            class="cards__delete"
-            />
-            <div class="cards__info">
-              <h3 class="cards__text">Latermar</h3>
-              <img
-              src="./images/icon/like-button.svg"
-              alt="like button"
-              class="cards__like"
-              />
-            </div>
-          </div>
-          <div class="cards__container">
-            <img
-              src="./images/card__image/card-5.jpg"
-              alt="Vanoise National Park"
-              class="cards__place-image"
-            />
-            <img
-            src="./images/icon/Trash.png"
-            alt="delete button"
-            class="cards__delete"
-            />
-            <div class="cards__info">
-              <h3 class="cards__text">Vanoise National Park</h3>
-              <img
-              src="./images/icon/like-button.svg"
-              alt="like button"
-              class="cards__like"
-              />
-            </div>
-          </div>
-          <div class="cards__container">
-            <img
-              src="./images/card__image/card-6.jpg"
-              alt="lago di Braies"
-              class="cards__place-image"
-            />
-            <img
-            src="./images/icon/Trash.png"
-            alt="delete button"
-            class="cards__delete"
-            />
-            <div class="cards__info">
-              <h3 class="cards__text">Lago di Braies</h3>
-              <img
-          
-                src="./images/icon/like-button.svg"
-                alt="like button"
-                class="cards__like"
-              />
-            </div>
-          </div>
-          
+         
+
         </section>
         <div class="popup" id="popup-profile">
           <form class="popup__form">
@@ -191,7 +83,8 @@
                 name="img"
                 placeholder="Titulo"
                 required
-              /><input
+              />
+              <input
                 type="text"
                 class="popup__input"
                 id="input-link"
@@ -210,17 +103,6 @@
         <p class="footer__copyright">&copy;2024 Sebastian Vaca</p>
       </footer>
     </div>
-
-    <template class="template__elements">
-      <div class="cards__container">
-        <img class="cards__place-image" src="" alt="" />
-        <button class="cards__delete"></button>
-      </div>
-      <div class="cards__info">
-        <h3 class="cards__text"></h3>
-        <button class="cards__like"></button>
-      </div>
-    </template>
 
     <script src="./Scripts/Script.js"></script>
   </body>
