@@ -47,13 +47,13 @@ function cardGenerator(name, link) {
   const card = template.cloneNode(true).content.querySelector(".cards__container");
   const cardImage = card.querySelector(".cards__place-image");
   const cardTitle = card.querySelector(".cards__text");
-  const btnDelete = card.querySelector("cards__delete");
-  const btnLike = card.querySelector("cards__like");
-  btnLike.addEventListener("click", funtion(){
-    btnLike.classList.toggle("cards__like-active");
+  const btnDelete = card.querySelector(".cards__delete");
+  const btnLike = card.querySelector(".cards__like");
+  btnLike.addEventListener("click", function(){
+    btnLike.classList.toggle(".cards__like-active");
   });
   
-  btnDelete.addEventListener("click", funtion(){
+  btnDelete.addEventListener("click", function(){
     card.remove();
   });
 
