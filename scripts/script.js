@@ -11,7 +11,7 @@ const popUpAdd = document.querySelector("#popup-add");
 const btnAdd = document.querySelector(".profile__add");
 const btnCloseAdd = document.querySelector("#close-add");
 const template = document.querySelector(".template__elements")
-const cardArea = document.querySelector(".cards__container");
+const cardArea = document.querySelector(".cards");
 
 
 
@@ -49,6 +49,17 @@ function cardGenerator(name, link) {
   .content.querySelector(".cards__container");
   const cardImage = card.querySelector(".cards__place-image");
   const cardTitle = card.querySelector(".cards__text");
+  const btnDelete = card.querySelector("cards__delete");
+  btnDelete.addEventListener("click", function(){
+    card.remove();
+  });
+  const btnLike = card.querySelector("cards__like")
+  btnLike.addEventListener("click", funtion(){
+    btnLike.classList.toggle("cards__like-active");
+  });
+  btnDelete.addEventListener("click", funtion(){
+    card.remove();
+  });
   cardImage.src = link;
   cardTitle.textContent = name;
   cardImage.alt = name;

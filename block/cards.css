@@ -46,11 +46,14 @@
   
   .cards__delete {
     position: absolute;
-    max-width: 18px;
-    max-height: 19px;
     top: 18px;
     right: 15px;
-    background-image: url(/images/icon/Trash.png);
+    width: 21px;
+    height: 21px;
+    background-image: url(../images/icon/Trash.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
   
   .cards__delete:hover {
@@ -60,12 +63,21 @@
 
   .cards__like {
     margin: auto auto;
-    background-image: url(/images/icon/like-button.svg);
+    width: 28px;
+    height: 21px;
+    background-image: url(../images/icon/like-button.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
   }
+
   .cards__like:hover {
     opacity: 0.5;
     cursor: pointer;
   }
+
+  .cards__like-active {
+    background-image: url(../images/icon/like-button-active.svg);
   
   @media screen and (max-width: 880px) {
     .cards {
