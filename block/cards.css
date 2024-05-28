@@ -78,6 +78,7 @@
 
   .cards__like-active {
     background-image: url(../images/icon/like-button-active.svg);
+  }
   
   @media screen and (max-width: 880px) {
     .cards {
@@ -93,4 +94,3 @@
       margin: 36px auto 0;
       grid-template-columns: 282px;
     }
-  }

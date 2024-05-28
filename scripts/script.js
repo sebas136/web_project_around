@@ -44,26 +44,22 @@ const initialCards = [
 ];
 
 function cardGenerator(name, link) {
-  const card = template
-  .cloneNode(true)
-  .content.querySelector(".cards__container");
+  const card = template.cloneNode(true).content.querySelector(".cards__container");
   const cardImage = card.querySelector(".cards__place-image");
   const cardTitle = card.querySelector(".cards__text");
   const btnDelete = card.querySelector("cards__delete");
-  btnDelete.addEventListener("click", function(){
-    card.remove();
-  });
-  const btnLike = card.querySelector("cards__like")
+  const btnLike = card.querySelector("cards__like");
   btnLike.addEventListener("click", funtion(){
     btnLike.classList.toggle("cards__like-active");
   });
+  
   btnDelete.addEventListener("click", funtion(){
     card.remove();
   });
+
   cardImage.src = link;
   cardTitle.textContent = name;
   cardImage.alt = name;
-
   cardArea.append(card);
   }
   initialCards.forEach(function(element){
