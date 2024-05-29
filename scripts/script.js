@@ -107,7 +107,11 @@ btnCloseAdd.addEventListener("click", closeAdd);
 
 formCards.addEventListener("submit", function (evt){
 evt.preventDefault();
-const cardToAdd = cardGenerator();
+
+const inputTitle = document.querySelector("#input-img");
+const inputLink = document.querySelector("#input-link");
+
+const cardToAdd = cardGenerator(inputTitle.value , inputLink.value);
 cardArea.prepend(cardToAdd);
 popupCards.classList.remove("popup_show");
 });
