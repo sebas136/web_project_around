@@ -99,7 +99,6 @@ function closeAdd() {
 btnAdd.addEventListener("click", openAdd);
 btnCloseAdd.addEventListener("click", closeAdd);
 
-
 formCards.addEventListener("submit", function (evt){
 evt.preventDefault();
 cardGenerator();
