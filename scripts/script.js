@@ -7,6 +7,7 @@ const profileName = document.querySelector(".profile__info");
 const profileAbout = document.querySelector(".profile__title");
 const btnProfileSave = document.querySelector(".popup__button-save");
 const formProfile = document.querySelector(".popup__form");
+const formCards = document.querySelector ("#popup-add")
 const popUpAdd = document.querySelector("#popup-add");
 const btnAdd = document.querySelector(".profile__add");
 const btnCloseAdd = document.querySelector("#close-add");
@@ -50,7 +51,7 @@ function cardGenerator(name, link) {
   const btnDelete = card.querySelector(".cards__delete");
   const btnLike = card.querySelector(".cards__like");
   btnLike.addEventListener("click", function(){
-    btnLike.classList.toggle(".cards__like-active");
+    btnLike.classList.toggle("cards__like-active");
   });
   
   btnDelete.addEventListener("click", function(){
@@ -97,3 +98,9 @@ function closeAdd() {
 }
 btnAdd.addEventListener("click", openAdd);
 btnCloseAdd.addEventListener("click", closeAdd);
+
+
+formCards.addEventListener("submit", function (evt){
+evt.preventDefault();
+cardGenerator();
+});

@@ -25,35 +25,35 @@
     margin: 0;
   }
   .cards__info {
-    display: flex;
-    justify-content: space-between;
-    width: 246px;
-    height: 79px;
-    margin: 0 22px 0 21px;
+    background-color: #fff;
+  border-radius: 0 0 10px 10px;
+  display: flex;
+  align-items: center;
   }
   .cards__text {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 23px;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    color: #000000;
-    margin: auto auto;
+  color: #000;
+  font-family: Inter;
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 29.05px;
+  width: 246px;
+  margin: 25px 0 31px 21px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
   }
   
   .cards__delete {
     position: absolute;
     top: 18px;
     right: 15px;
-    width: 21px;
-    height: 21px;
+    width: 18px;
+    height: 19px;
     background-image: url(../images/icon/Trash.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    transition: opacity 0.3s ease;
   }
   
   .cards__delete:hover {
@@ -67,8 +67,7 @@
     height: 21px;
     background-image: url(../images/icon/like-button.svg);
     background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    
   }
 
   .cards__like:hover {
