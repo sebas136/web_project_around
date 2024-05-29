@@ -1,4 +1,6 @@
 const popUpProfile = document.querySelector("#popup-profile");
+const popupCards = document.querySelector("#profile__add");
+const profileButton= document.querySelector(".profile__add");
 const btnEdit = document.querySelector(".profile__edit");
 const btnCloseProfile = document.querySelector("#close-profile");
 const profileNameInput = document.querySelector("#input-name");
@@ -61,10 +63,11 @@ function cardGenerator(name, link) {
   cardImage.src = link;
   cardTitle.textContent = name;
   cardImage.alt = name;
-  cardArea.append(card);
+  return card;
   }
   initialCards.forEach(function(element){
-    cardGenerator(element.name, element.link);
+    const newCard = cardGenerator(element.name, element.link);
+    cardArea.append(newCard);
   });
 
 //open close profile profile
@@ -99,7 +102,12 @@ function closeAdd() {
 btnAdd.addEventListener("click", openAdd);
 btnCloseAdd.addEventListener("click", closeAdd);
 
+
+
+
 formCards.addEventListener("submit", function (evt){
 evt.preventDefault();
-cardGenerator();
+const cardToAdd = cardGenerator();
+cardArea.prepend(cardToAdd);
+popupCards.classList.remove("popup_show");
 });
