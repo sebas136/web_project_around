@@ -54,16 +54,23 @@
                 class="popup__input"
                 id="input-name"
                 name="nombre"
+                minlength="2"
+                maxlength="40"
                 placeholder="Nombre"
                 required
-              /><input
+              />
+              <span class="form__input-error input-name-error" ></span>
+              <input
                 type="text"
                 class="popup__input"
                 id="input-title"
                 name="title"
+                minlength="2"
+                maxlength="40"
                 placeholder="Acerca de mi"
                 required
               />
+              <span class="form__input-error input-title-error" > </span>
               <button class="popup__button popup__button-save" type="submit">
                 Save
               </button>
@@ -84,6 +91,7 @@
                 placeholder="Titulo"
                 required
               />
+              <span class="form__input-error input-img-error" > aqui</span>
               <input
                 type="text"
                 class="popup__input"
@@ -92,6 +100,7 @@
                 placeholder="Enlace a la imagen"
                 required
               />
+              <span class="form__input-error input-link-error" >aqui</span>
               <button class="popup__button popup__button-create" type="submit">
                 Crear
               </button>
@@ -105,5 +114,6 @@
     </div>
 
     <script src="./scripts/script.js"></script>
+    <script src="scripts/validation.js"></script>
   </body>
 </html>

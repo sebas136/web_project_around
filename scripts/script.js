@@ -92,6 +92,7 @@ btnEdit.addEventListener("click", openProfile);
 btnCloseProfile.addEventListener("click", closeProfile);
 formProfile.addEventListener("submit", saveChanges);
 
+
 //open close add
 function openAdd() {
   popUpAdd.classList.toggle("popup__show");
@@ -103,8 +104,6 @@ btnAdd.addEventListener("click", openAdd);
 btnCloseAdd.addEventListener("click", closeAdd);
 
 
-
-
 formCards.addEventListener("submit", function (evt){
 evt.preventDefault();
 
@@ -114,4 +113,5 @@ const inputLink = document.querySelector("#input-link");
 const cardToAdd = cardGenerator(inputTitle.value , inputLink.value);
 cardArea.prepend(cardToAdd);
 popupCards.classList.remove("popup_show");
+
 });

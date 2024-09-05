@@ -132,3 +132,7 @@
     line-height: 17px;
   }
 }
+
+.form__input-error{
+  color:red;
+}
