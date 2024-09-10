@@ -41,8 +41,6 @@ const showInputError = (formElement, inputElement, errorMessage, settings) => {
     });
   };
   
-  enableValidation();
-
   enableValidation({
     formSelector: ".popup__form",
     inputSelector: ".popup__input",
