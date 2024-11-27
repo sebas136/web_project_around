@@ -7,8 +7,8 @@ import {
   openAdd,
   handleEsc,
 } from "./utils.js";
-import PopupWhithForm from "../PopupWithform.js";
-import PopupWhithimage from "../PopupWithimage.js";
+import PopupWithForm from "../PopupWithform.js";
+import PopupWithimage from "../PopupWithimage.js";
 
 const btnEdit = document.querySelector(".profile__edit");
 const btnCloseProfile = document.querySelector("#close-profile");
@@ -20,14 +20,13 @@ const elementNameInput = document.querySelector("#input-img");
 const elementLinkInput = document.querySelector("#input-link");
 const formElements = document.querySelector("#elements-form");
 const popupOverlays = document.querySelectorAll(".popup__overlay");
-const popupProfile = new PopupWhithForm("#popup-profile");
-const popupAdd = new PopupWhithForm("#popup-add");
-const popupImg = new PopupWhithimage("#popup-img");
+const popupProfile = new PopupWithForm("#popup-profile");
+const popupAdd = new PopupWithForm("#popup-add");
+const popupImg = new PopupWithimage("#popup-img");
 
 popupProfile.setEventListeners();
 popupAdd.setEventListeners();
 popupImg.setEventListeners();
-
 
 const initialCards = [
   {
@@ -57,11 +56,10 @@ const initialCards = [
 ];
 
 btnEdit.addEventListener("click", () => {
-  popupProfile.open()
+  popupProfile.open();
 });
 btnCloseProfile.addEventListener("click", () => {
-  popupAdd.open()
-
+  popupAdd.open();
 });
 formProfile.addEventListener("submit", saveChanges);
 
@@ -71,15 +69,18 @@ btnCloseAdd.addEventListener("click", closeAll);
 //Iniciar
 initialCards.forEach(function (card) {
   const newElement = new Card(card.name, card.link, () => {
-    popupImg.open(card.name, card.link)
+    popupImg.open(card.name, card.link);
   });
   elementArea.append(newElement.generateCard());
-
 });
 function addNewCard(evt) {
-  const newElement = new Card(elementNameInput.value, elementLinkInput.value,  () => {
-    popupImg.open(elementNameInput.value, elementLinkInput.value)
-  });
+  const newElement = new Card(
+    elementNameInput.value,
+    elementLinkInput.value,
+    () => {
+      popupImg.open(elementNameInput.value, elementLinkInput.value);
+    }
+  );
   evt.preventDefault();
   elementArea.prepend(newElement.generateCard());
 

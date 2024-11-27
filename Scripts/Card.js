@@ -4,7 +4,7 @@ export class Card {
     this._name = name;
     this._link = link;
     this._element = this._getTemplate();
-    this.handleClickImage = handleClickImage
+    this.handleClickImage = handleClickImage;
   }
   _getTemplate() {
     return document
@@ -35,9 +35,9 @@ export class Card {
     this._likeBtn.addEventListener("click", () => this._handleLike());
     this._dltBtn.addEventListener("click", () => this._handleDelete());
     this._imgBtn.addEventListener("click", () => this._setPopUp());
-    this.cardImage.addEventListener("click",()=>{
-      this.handleClickImage()
-    })
+    this._elementImage.addEventListener("click", () => {
+      this.handleClickImage();
+    });
   }
 
   _setPopUp() {
