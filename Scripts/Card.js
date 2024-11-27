@@ -1,9 +1,10 @@
 import { closeAll, handleEsc } from "./utils.js";
 export class Card {
-  constructor(name, link) {
+  constructor(name, link, handleClickImage) {
     this._name = name;
     this._link = link;
     this._element = this._getTemplate();
+    this.handleClickImage = handleClickImage
   }
   _getTemplate() {
     return document
@@ -34,6 +35,9 @@ export class Card {
     this._likeBtn.addEventListener("click", () => this._handleLike());
     this._dltBtn.addEventListener("click", () => this._handleDelete());
     this._imgBtn.addEventListener("click", () => this._setPopUp());
+    this.cardImage.addEventListener("click",()=>{
+      this.handleClickImage()
+    })
   }
 
   _setPopUp() {
