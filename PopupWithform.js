@@ -2,32 +2,30 @@ import Popup from "./Popup.js";
 export default class PopupWithForm extends Popup {
   constructor(popupSelector) {
     super(popupSelector);
-  }
-open() {
-    this.popupElement.classList.add("profile__edit");
-    document.addEventListener("keydown", this._handleEsClose);
-  }
-  close() {
-    this.popupElement.classList.remove("profile__edit");
-    document.removeEventListener("keydown", this._handleEsClose);
+    this._handleFormSubmit = this._handleFormSubmit.bind(this);
+    this._form = this.popupElement.querySelector(".popup__form");
+
+    this._inputList = Array.from(this._form.querySelectorAll(".profile__edit"));
   }
 
-  _handleEsClose(evt) {
-    if (evt.key === "Escape") {
-      this.close();
-    }
+  _getInputValues() {
+    const inputValues = {};
+    this._inputList.forEach((input) => {
+      inputValues[input.id] = input.value;
+    });
+    return inputValues;
   }
-  handleCliclOutside(evt) {
-    return evt.target.classList.contains("profile__edit");
-  }
+
   setEventListeners() {
-    this.closeButton.addEventListener("click", () => {
-      this.close();
-    });
-    this.popupElement.addEventListener("click", (evt) => {
-      if (this.handleCliclOutside(evt)) {
-        this.close();
-      }
+    super.setEventListeners();
+    this._form.addEventListener("submit", (evt) => {
+      evt.preventDefault();
+      this._handleFormSubmit(this._getInputValues());
     });
   }
+
+  close() {
+    super.close();
+    this._form.reset();
+}
 }
